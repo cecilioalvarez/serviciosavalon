@@ -62,6 +62,14 @@ public class ServicioFacturacionImpl  {
 		repositorioCliente.actualizar(cliente);
 	}
 	
+	public List<Cliente> OrdenarClientesPor(String campo) {
+		return repositorioCliente.buscarTodosPor(campo);
+	}
+
+	public List<Cliente> buscarTodosClientesPorApellido(String apellido) {
+		return repositorioCliente.buscarPorApellido(apellido);
+	}
+
 	public List<Factura> buscarTodosFacturasConLineas() {
 		return repositorioFactura.buscarTodosConLineas();
 	}
